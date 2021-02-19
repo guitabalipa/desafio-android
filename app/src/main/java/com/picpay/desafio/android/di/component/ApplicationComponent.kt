@@ -1,6 +1,7 @@
 package com.picpay.desafio.android.di.component
 
 import android.app.Application
+import com.picpay.desafio.android.di.module.DatabaseModule
 import com.picpay.desafio.android.di.module.InterceptorsModule
 import com.picpay.desafio.android.di.module.NetworkModule
 import dagger.BindsInstance
@@ -11,7 +12,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         NetworkModule::class,
-        InterceptorsModule::class
+        InterceptorsModule::class,
+        DatabaseModule::class
     ]
 )
 interface ApplicationComponent {

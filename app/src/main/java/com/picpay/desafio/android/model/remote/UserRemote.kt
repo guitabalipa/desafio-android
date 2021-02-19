@@ -1,10 +1,11 @@
 package com.picpay.desafio.android.model.remote
 
-import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class UserRemote(
-    @Json(name = "img") val img: String,
-    @Json(name = "name") val name: String,
-    @Json(name = "id") val id: Int,
-    @Json(name = "username") val username: String
+    val img: String,
+    val name: String,
+    val id: Int,
+    val username: String
 )
